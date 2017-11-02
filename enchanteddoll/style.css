@@ -1,0 +1,925 @@
+/*
+Theme Name: WP sucks Balls
+Author: Your Daddy
+Version: 1.0
+*/
+
+/* ================  GENERAL LAYOUT*/
+
+* {
+    box-sizing: border-box;
+}
+
+.hr_searchicon {
+    height: 100%;
+}
+
+body {
+    background-color: rgba(0,0,0,0.7);
+    font-family: sans-serif;
+    width: 100%;
+    height: auto;
+}
+
+div.container {
+    background-color: white;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+article.post {
+    text-align: justify;
+    border-bottom: 1px dotted #999;
+    width: 80%;
+    height: auto;
+    padding: 15px;
+    overflow: hidden; 
+}
+
+article.post:last-of-type {
+    border-bottom: none;
+    height: auto;
+}
+
+article.post h2 {
+    margin-bottom: 0;
+    font-family: 'Amatic SC', cursive;
+    border-bottom: 0.5px solid #DDD;
+}
+
+article.post h2:first-of-type {
+    margin-top: 20px;
+}
+
+.post-info {
+    font-size: 10px;
+}
+
+p {
+    font-size: 12px;
+}
+
+article.post img {
+    width: 100%;
+    height: 100%;
+}
+
+article.post-info a:link;
+article.post-info a:visited {
+    color: #DDD;
+}
+
+/*BUTTONS*/
+
+.button-position {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mybutton {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 5px 10px 5px 10px;
+    border: none;
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button#sendbutt {
+    width: 40%;
+}
+
+/* =================  HEADER */
+
+.site-header {
+    width: 100%;
+    height: 90px;
+}
+
+#site-name {
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 250%;
+    font-weight: 100;
+    margin-top: 5px;
+    margin-bottom: 0;    
+}
+
+#site-tagline {
+    font-family: 'Amatic SC', cursive;
+    font-size: 130%;
+    font-weight: 100;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* =================  HEADER BAR */
+
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav ul:before, .site-nav ul:after { content:""; display: table;}
+.site-nav ul:after {clear: both;}
+/*.site-nav ul {*zoom: 1;}*/
+
+.site-nav ul li {
+    list-style: none;
+    float: left;
+}
+
+div.header-left {
+    width: 30%;
+    height: auto;
+    float: left;
+}
+
+div.header-right {
+    width: 70%;
+    padding-top: 50px;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-end;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/* ================= SITE HEADER MENU */
+
+.site-header nav ul li {
+    margin-right: 10px;
+}
+
+.site-header nav ul li a:link, 
+.site-header nav ul li a:visited {
+    display: block;
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.site-header nav ul li a:hover {
+    border-bottom: 1px solid #000;
+}
+
+.site-header nav ul li.current-menu-item a:link, 
+.site-header nav ul li.current-menu-item a:visited {
+    border-bottom: 1px solid #000;
+    color: black;
+}
+
+/* =================  FOOTER */
+div.s_media {
+    display: flex;
+    justify-content: center;
+}
+
+div.s_media i {
+    color: #000;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+div.s_media i.fa.fa-facebook {
+    padding-left: 0px;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border-top: 1px solid #999; 
+}
+
+.site-footer p {
+    font-family: 'Amatic SC', cursive;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+/*===========/GALLERY==========*/
+
+div.gallery-index.clearfix {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+
+}
+
+    
+div#costumed, div#tattoo, div#nude {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-flex;
+    text-align: center;
+    width: 33%;
+    height: auto;
+    padding: 12px;
+    /*
+FOR TABLET
+width: 32%;
+    height: 350px;
+*/
+
+} 
+
+img#costumeimg, img#nudeimg, img#tattooimg {
+/*    box-sizing: border-box;*/
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*OVERLAY*/
+
+#nude_txt, #costumed_txt, #tattoo_txt {
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    right: 0;
+    height: 50%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0,0,0,0.7);
+}    
+
+
+div#nude:hover #nude_txt {
+    opacity: 1;
+    cursor: pointer;
+}
+
+div#costumed:hover #costumed_txt {
+    opacity: 1;
+    cursor: pointer;
+}
+
+div#tattoo:hover #tattoo_txt {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.overtext {
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    font-size: 150%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+   .overtext a.buttonlink:link,
+    .overtext a.buttonlink:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+/*/OVERLAY*/
+
+/*GALLERY PAGE*/
+
+.ed_gallery_contain {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+}
+
+.gallery-images-side{
+    width: 80%;
+    height: 100%;
+}
+
+.gallery-widget-side {
+    width: 20%;
+    height: 100%;
+}
+
+
+/*QUOTE*/
+
+#quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    width: 100%;
+    height: auto;
+    color: rgba(255, 255, 255, 0.7); 
+}
+
+#quotebox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8); 
+    width: 100%;
+    height: auto;
+}
+
+#quotebox p {
+    text-indent: 50px;
+    padding-left: 20px;
+    padding-right: 20px; 
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-bottom: 10px; 
+    letter-spacing: 2px;
+    font-size: 20px;
+    line-height: 25px;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    text-align: center;
+}
+
+#quoteimg {
+    width: 50px;
+    padding: 10px;
+    margin: 5px;
+    height: auto;
+}
+
+/*BLOG STYLES*/
+
+.post h2 {
+    margin-bottom: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+    border-bottom: 0.5px solid #DDD;
+}
+
+.post h2:first-of-type {
+    margin-top: 30px;
+}
+
+.post-info p {
+    font-size: 10px;
+}
+
+.post-info a:link;
+.post-info a:visited {
+    color: #DDD;
+}
+
+#blogwrap {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+}
+
+.blog-nav-wrap {
+    width: 20%;
+    height: auto;
+    margin-top: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-right: 1px solid #DDD;
+    border-left: 1px solid #DDD;
+}
+
+li.widget {
+    list-style-type: none;
+}
+
+li.widget ul {
+    padding: 0px;
+}
+
+li.widget ul a {
+    text-decoration: none;
+}
+
+li.widget li {
+    list-style-type: none; 
+    margin-top: 10px;
+}
+
+li#categories-2 h2.widgettitle, 
+.blog-nav-wrap label.screen-reader-text {
+    display: none;
+}
+
+li#recent-posts-2.widget widget_recent_entries h2.widgettitle {
+    text-align: center;
+}
+
+
+/*selection thing*/
+
+select#cat.postform {
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-user-select: none;
+    font-family: 'Amatic SC', cursive;      
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    color: #555;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+option.level-0 {
+    font-size: 10px;
+}
+
+/*About Page*/
+
+div.top-half {
+    display: inline-flex;
+    width: 97%;
+    height: auto;
+    margin: 20px;
+    padding: 10px;
+    border-left: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+}
+
+div.top-half-txt {
+    width: 60%;
+    height: auto;
+    padding: 5px;
+}
+
+div.top-half-txt h1 {
+    margin: 0;
+    font-weight: 100;
+    font-family: 'Amatic SC', cursive;
+    text-align: right;
+}
+
+div.top-half-txt h1 span {
+    margin-bottom: 3px;
+    border-bottom: 1px solid black;
+}
+
+div.top-half-txt p {
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+}
+
+div.top-half-img {
+    width: 40%;
+    height: auto; 
+    overflow: hidden;
+    padding: 5px;
+}
+
+
+div.bottom-half {
+    display: inline-flex;
+    width: 97%;
+    height: auto;
+    margin: 20px;
+    padding: 10px;
+    border-left: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+}
+
+div.bottom-half-txt {
+    width: 60%;
+    height: auto;
+    padding: 5px;
+}
+
+div.bottom-half-txt h1 {
+    margin: 0;
+    font-weight: 100;
+    font-family: 'Amatic SC', cursive;
+    text-align: left;
+}
+
+div.bottom-half-txt h1 span {
+    margin-bottom: 3px;
+    border-bottom: 1px solid black;
+}
+
+div.bottom-half-txt p {
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+}
+
+div.bottom-half-img {
+    width: 40%;
+    height: auto; 
+    overflow: hidden;
+    padding: 5px;
+}
+
+
+/*CONTACT PAGE*/
+
+.contact-container{
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+}
+
+#formbox {
+    width: 50%;
+    height: auto;
+    margin: 25px;
+    margin-right: 0px;
+}
+
+#formbox form h1 {
+    margin: 0;
+    font-family: 'Amatic SC', cursive; 
+    font-size: 100%;
+    font-weight: 100;
+}
+
+#formbox h2 span {
+    margin: 0;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 100;
+    font-size: 100%;
+    border-bottom: 1px solid black;
+}
+
+form {
+    margin-top: 30px;
+}
+
+.smallinput {
+    width: 80%;
+    height: 40px;
+    padding: 12px 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 0.5px solid black;
+    font-size: 15px;
+    resize: none;
+}
+
+#messageinput {
+    width: 80%;
+    height: 100px;
+    padding: 12px 20px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: 0.5px solid black;
+    font-size: 1.5vw;
+    resize: none;
+}
+
+/*/FORM*/
+
+/*EXTRA*/
+
+.contact-message {
+    width: 50%;
+    height: auto;
+    padding-top: 30px;
+}
+
+#extrabox {
+    width: 95%;
+    height: auto;
+    margin-top: 25px;
+}
+
+#extrabox p {
+    line-height: 20px;
+    letter-spacing: 2px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+
+
+}
+
+#extrabox img {
+    padding-top: 20px;
+    text-align: center;
+}
+
+a {
+    color: black;
+    font-weight: 100;
+}
+
+
+
+/*PHONE*/
+@media only screen and (max-width: 680px) and (min-width: 150px){
+    
+  /* =================  HEADER */
+    div.header-left {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    div.header-right {
+        width: 100%;
+        padding-top: 10px;
+        border-top: 1px solid rgba(0,0,0,0.7);
+        display: flex;
+        justify-content: center;
+    }
+    
+    .site-header {
+        width: 100%;
+        height: auto;
+    }
+
+    #site-name {
+        font-size: 30px;
+        margin-top: 5px;
+    }
+
+    #site-tagline {
+        font-size: 15px;
+    }
+    
+    .site-header nav ul li a:link, 
+    .site-header nav ul li a:visited {
+        font-size: 18px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    
+    /* =================  FOOTER */
+    
+    div.s_media i {
+        color: #000;
+        padding-top: 10px;
+        padding-left: 25px;
+    }
+    
+/*    HOME GALLERY*/
+    
+    div.gallery-index.clearfix {
+        display: none;
+    }
+    
+    #quote {
+        display: none;
+    }
+    
+/*    blog*/
+    article.post {
+        width: 100%;
+    }
+    
+    .blog-nav-wrap {
+        display: none;
+    }
+    
+/*    about*/
+    
+    div.top-half {
+        width: 100%;
+        margin: 0;
+    }
+    
+    div.top-half-txt {
+        width: 100%;
+    }
+    
+    div.top-half-txt h1 {
+        text-align: center;
+    }
+    
+    div.top-half-txt p{
+        font-size: 15px;
+        font-weight: 100;
+
+    }   
+    
+    div.bottom-half {
+        width: 100%;
+        margin: 0;
+    }
+    
+    div.bottom-half-txt {
+        width: 100%;
+    }    
+    
+    div.bottom-half-txt h1 {
+        text-align: center;
+    }
+    
+    div.bottom-half-txt p{
+        font-size: 15px;
+        font-weight: 100;
+    }
+    
+    div.top-half-img {
+        display: none;
+    }
+    
+    div.bottom-half {
+        display: block;
+    }
+    
+    div.bottom-half-img {
+        width: 100%;
+    }
+/*    contact*/
+    
+    .contact-container {
+        display: block;
+    }
+    
+    #formbox {
+        width: 100%;
+    }
+    
+    div.contact-message {
+        width: 100%;
+        padding: 0px;
+
+    }
+    
+    div#extrabox p {
+        width: 100%;
+        font-size: 12px;
+        line-height: 25px;
+        padding: 5px;
+    }
+    
+    .smallinput {
+        padding: 2px;
+    }
+    
+    .mybutton a.buttonlink:link,
+    .mybutton a.buttonlink:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    
+}
+
+/*TABLET bg*/
+@media only screen and (max-width: 1024px) and (min-width: 681px){
+    
+    div.container {
+    background-color: white;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+    
+    /*    HEADER*/
+    
+    div.header-right {
+        padding-top: 50px;
+    }
+    
+    #site-name {
+        font-size: 240%;
+   
+    }   
+    
+        /* =================  FOOTER */
+    
+    .site-footer p {
+        font-size: 15px;
+
+    }
+    
+    div.s_media i {
+        color: #000;
+        font-size: 1.5em;
+        padding-top: 10px;
+        padding-left: 25px;
+    }
+    
+/*    HOME GALLERY*/
+    
+    div#costumed, div#tattoo, div#nude {
+        position: relative;
+        box-sizing: border-box;
+        display: inline-flex;
+        text-align: center;
+        width: 32%;
+        padding: 2px;
+    } 
+    
+    #nude_txt, #costumed_txt, #tattoo_txt {
+        opacity: 1;
+    }
+    
+    #quotebox p {
+        font-size: 20px;
+    }
+    
+/*    about*/
+    
+    div.top-half-txt p{
+        font-size: 15px;
+        font-weight: 100;
+
+    }  
+    
+    div.bottom-half-txt p{
+        font-size: 15px;
+        font-weight: 100;
+
+    }  
+    
+/*    contact*/
+    
+    .contact-container {
+        display: block;
+    }
+    
+    #formbox {
+        width: 100%;
+    }
+    
+    div.contact-message {
+        width: 100%;
+
+    }
+    
+    div#extrabox p {
+        font-size: 20px;
+        line-height: 25px;
+        padding: 20px;
+    }
+    
+    .button-position {
+        display: none;
+    }
+    
+}
+
+
+/*DESKTOP*/
+@media only screen and (max-width: 1366px) and (min-width: 1025px){
+    
+/*    FOOTER*/
+    div.s_media {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .button-position {
+        display: none;
+    }
+    
+}
+
+/*DESKTOP BG*/
+
+@media only screen and (max-width: 2200px) and (min-width: 1367px){
+    
+/*    FOOTER*/
+    div.s_media {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .button-position {
+        display: none;
+    }
+    
+}

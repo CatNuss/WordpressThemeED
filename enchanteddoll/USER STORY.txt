@@ -1,0 +1,91 @@
+USER STORY
+
+As a Wordpress User, I want a customizable theme for my portfolio website so that I can edit it on my own time. 
+
+EPIC: Create a customizable wordpress portfolio-type theme
+
+	Overall Layout:
+
+		-nav bar on top right
+		-Website name and Tagline on top left
+		-footer displays website name &copy; and date
+		-social media links above footer
+			! [ ] make dynamic !
+		-color scheme is black and white 
+			[ ] make color customizable: 
+					-buttons
+					-links
+					-headings
+					-background colors
+
+	
+			-Home Page
+				-Header Image
+					[ ] dynamic image through Customize bar
+
+				-Artist Statement
+					[ ] make dynamic text field
+
+				-Gallery Categories/links as images
+					[ ] images and text made dynamic
+
+
+			-Gallery Page
+				-Grid Layout
+					[ ] User needs to be able to add own images
+
+				-Search bar
+
+				-Split into Categories
+
+
+
+			-Blog Page
+				-Display posts
+
+				-list of posts on right side
+
+				-filters based on category and author
+
+				-Search bar? 
+
+				?QUESTION?
+				how do I display posts relevant to content in search bar?
+
+
+
+			-Contact Page
+				-Form
+				-Dynamic headings? 
+					[ ] make sections in customize panel
+				-Sends email to user
+
+				?QUESTION?
+				how do I link the response to email? 
+
+
+
+			-About Page
+				-About the artist 
+					[ ] make sections in customize panel
+				-Info on work 
+				-link to Gallery
+
+
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+
