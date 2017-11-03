@@ -16,7 +16,7 @@ get_header();
         <div id="quotebox">
             
             
-                <p><img id="quoteimg" src="http://localhost:8082/wordpress/wp-content/uploads/2017/10/quote.png">More than mere playthings, Enchanted Dolls are a brand of elegantly sculpted and articulated works of art. Adorned with elaborate costumes and graced with precious gemstones, metals, and rare found objects, each ball-jointed porcelain doll intricately conveys an aspect of our humanity.</p>
+                <p><img id="quoteimg" src="http://localhost:8082/wordpress/wp-content/uploads/2017/10/quote.png"><?php echo get_theme_mod('ed_quote_text_area') ?></p>
             
 
             
